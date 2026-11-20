@@ -1,177 +1,169 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Chang Lu studies neuroscience and computer science at Brown University. Explore his work in healthcare technology, global health and biomedical imaging.">
-<meta name="theme-color" content="#f1f7f4">
-<title>Chang Lu | Healthcare, research & technology</title>
-<style>
-:root { color-scheme: light; --ink:#152f30; --muted:#435c5c; --teal:#14655c; --paper:#f1f7f4; --line:#c9ddd7; --mint:#c1f0d8; }
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; background:var(--paper); color:var(--ink); font:1rem/1.65 system-ui,sans-serif; }
-a { color:inherit; text-underline-offset:.24em; }
-a:focus-visible { outline:3px solid #178475; outline-offset:5px; border-radius:3px; }
-.wrap { width:min(100% - 3rem,68rem); margin-inline:auto; }
-.skip { position:absolute; top:.5rem; left:1rem; z-index:3; padding:.5rem 1rem; background:white; transform:translateY(-150%); }
-.skip:focus { transform:none; }
-header { position:sticky; top:0; z-index:2; background:#f1f7f4f5; border-bottom:1px solid var(--line); }
-header .wrap, nav, .actions { display:flex; flex-wrap:wrap; align-items:center; gap:.75rem 1.25rem; }
-header .wrap { justify-content:space-between; padding-block:.8rem; }
-nav { font-size:.9rem; }
-nav a, .brand { text-decoration:none; }
-nav a:hover, .brand:hover { text-decoration:underline; }
-.brand { font-weight:750; }
-.hero { min-height:29rem; display:grid; align-items:center; padding:clamp(3rem,9vw,8rem) 0; background:radial-gradient(ellipse at 89% 22%,#daf1e4,transparent 63%); border-bottom:1px solid var(--line); }
-.kicker, time, .meta { font-size:.875rem; color:var(--teal); font-weight:650; }
-.kicker { letter-spacing:.09em; text-transform:uppercase; }
-h1,h2,h3,p { margin-top:0; }
-h1 { font:normal clamp(4rem,12vw,8rem)/.9 Georgia,serif; letter-spacing:-.07em; margin-bottom:1.5rem; }
-h2 { font:normal clamp(2.4rem,6vw,4rem)/1 Georgia,serif; letter-spacing:-.045em; margin-bottom:1.5rem; }
-h3 { font-size:clamp(1.35rem,3vw,2.1rem); line-height:1.15; letter-spacing:-.035em; margin:.35rem 0 .7rem; }
-.hero-content { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:2.5rem; align-items:center; }
-.headshot { width:clamp(9rem,24vw,16rem); height:auto; border-radius:1.5rem; box-shadow:0 1rem 2.5rem #123c3920; }
-.insurf-brand { display:flex; gap:.55rem; align-items:center; }
-.insurf-brand img { width:1.45rem; height:auto; filter:brightness(0) invert(1); }
-.insurf-brand .wordmark { width:min(11rem,100%); aspect-ratio:3.2; object-fit:cover; filter:none; }
-.insurf-brand:has(.wordmark:not([hidden])) .brand-mark { display:none; }
-.insurf-brand:has(.wordmark:not([hidden])) h3 { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
-.hero-content:not(:has(.headshot:not([hidden]))) { grid-template-columns:1fr; }
-.hero .intro { max-width:37rem; font-size:clamp(1.08rem,2.5vw,1.35rem); color:var(--muted); }
-.button { display:inline-block; padding:.65rem 1rem; background:var(--teal); color:white; border-radius:2rem; font-weight:650; text-decoration:none; }
-.button:hover { background:#104f48; }
-main,section,article { scroll-margin-top:7rem; }
-.section { padding-block:clamp(3.5rem,8vw,6rem); }
-.cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
-.card { border:1px solid var(--line); border-radius:1.25rem; padding:clamp(1.3rem,4vw,2.5rem); background:#fff; }
-.card p:last-child, .card ul:last-child { margin-bottom:0; }
-.card .body { color:var(--muted); }
-.feature { grid-column:1/-1; background:#123c39; border-color:#123c39; color:#f5fff9; display:grid; grid-template-columns:1.2fr 1fr; gap:1.5rem 3rem; align-items:center; }
-.feature .meta, .feature time { color:#c1f0d8; }
-.feature h3 { font:normal clamp(2.7rem,7vw,4.5rem)/1 Georgia,serif; letter-spacing:-.05em; }
-.products { margin:0; display:grid; gap:.65rem; }
-.products div { background:#23544e; border:1px solid #4a756c; border-radius:.8rem; padding:.8rem 1rem; }
-.products dt { color:var(--mint); font-weight:750; }
-.products dd { margin:0; }
-#education { background:#e4f2ea; border-block:1px solid var(--line); }
-#education p, #contact p { max-width:42rem; }
-footer { padding:1.2rem 0; border-top:1px solid var(--line); color:var(--muted); }
-@media (max-width:42rem) {
-  .wrap { width:calc(100% - 2rem); }
-  .cards,.feature,.hero-content { grid-template-columns:1fr; }
-}
-@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Chang Lu's portfolio. Neuroscience, medtech, healthcare research, and the occasional trivia question.">
+  <meta name="theme-color" content="#0b1718">
+  <title>Chang Lu | Neuroscience &amp; Medtech</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="portfolio.js" defer></script>
 </head>
 <body id="top">
-<a class="skip" href="#main">Skip to content</a>
-<header>
-  <div class="wrap">
-    <a class="brand" href="#top">Chang Lu</a>
-    <nav aria-label="Main navigation">
-      <a href="#experience">Experience</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-<main id="main">
-  <section class="hero" aria-labelledby="name">
-    <div class="wrap hero-content">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top">Chang Lu<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#profile">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="wrap hero" id="profile" aria-labelledby="hero-title">
       <div>
-      <p class="kicker">Neuroscience · Computer science · Health</p>
-      <h1 id="name">Chang Lu</h1>
-      <p class="intro">I study neuroscience and computer science at Brown University. My work spans health insurance tools, global health research, and medical imaging.</p>
-      <div class="actions"><a class="button" href="#experience">Explore my work</a><a href="#contact">Get in touch</a><a href="assets/chang-lu-cv.pdf">View CV (PDF)</a></div>
-      </div>
-      <img class="headshot" data-image="assets/headshot.jpg" alt="Portrait of Chang Lu" width="1024" height="1024" hidden>
-    </div>
-  </section>
-
-  <section id="experience" class="wrap section" aria-labelledby="work-title">
-    <h2 id="work-title">Experience</h2>
-    <div class="cards">
-      <article id="insurf" class="card feature" data-reveal aria-labelledby="insurf-title">
-        <div>
-          <div class="meta">Co-founder &amp; CEO · Y Combinator S26</div>
-          <div class="insurf-brand">
-            <img class="brand-mark" src="assets/insurf-mark.webp" alt="" width="356" height="400">
-            <img class="wordmark" data-image="assets/insurf.png" alt="" width="1200" height="1200" hidden>
-            <h3 id="insurf-title">Insurf</h3>
-          </div>
-          <p><time datetime="2026-04">Apr 2026</time> – <time datetime="2026-11">Nov 2026</time></p>
-          <p>Co-founded Insurf and worked on tools to compare the true cost of health plans and help practices navigate insurance authorizations and appeals. Visited more than 100 practices and employers to learn how those workflows operated.</p>
-          <a href="https://www.insurf.io/">Visit Insurf</a>
+        <p class="eyebrow">Neuroscience &amp; medtech</p>
+        <h1 id="hero-title">Hi, I’m Chang<span>.</span></h1>
+        <p class="intro">I’m a neuroscientist with a soft spot for medtech and hard trivia questions.</p>
+        <p class="bio">I’ve worked on liver tumor imaging, AI in global health, and tools that help people make sense of health insurance. Outside of work, I’m usually fencing, playing trivia, or making a case for a Christopher Nolan rewatch.</p>
+        <div class="links">
+          <a class="button primary" href="#experience">Explore my work</a>
+          <a class="button" href="assets/chang-lu-cv.pdf">CV <span aria-hidden="true">· PDF</span></a>
+          <a class="button" href="https://www.linkedin.com/in/changxianlu">LinkedIn</a>
         </div>
-        <dl class="products">
-          <div><dt>Surely</dt><dd>Health-plan selection based on total cost.</dd></div>
-          <div><dt>Inveto</dt><dd>AI-assisted prior authorization and denial appeals.</dd></div>
-        </dl>
-      </article>
+      </div>
+      <img class="portrait" src="assets/headshot.jpg" alt="Chang Lu" width="200" height="200" fetchpriority="high">
+    </section>
 
-      <article id="global-health" class="card" data-reveal>
-        <div class="meta">Undergraduate researcher · Sep 2026 – Present</div>
-        <h3>Brown Center for Global Health Equity</h3>
-        <p class="body">Reviewed AI and machine-learning studies in global health and compared applications by health domain and clinical function to identify gaps in adoption.</p>
-      </article>
-      <article id="imaging" class="card" data-reveal>
-        <div class="meta">Biotechnology research intern · Jul 2024 – Apr 2025</div>
-        <h3>Winship Cancer Institute</h3>
-        <p class="body">Helped train a foundation model to detect and segment liver tumors in CT scans. Applied ZeroMamba to liver cancer imaging data and compiled photon attenuation data for more than 50 materials to support CT simulation.</p>
-      </article>
-      <article id="pharmacy" class="card" data-reveal>
-        <div class="meta">Pharmacy intern · Jun – Jul 2023</div>
-        <h3>Braselton Pharmacy</h3>
-        <p class="body">Assisted with hundreds of medication orders for older patients and organized and checked order records for errors.</p>
-      </article>
-      <article id="pep" class="card" data-reveal>
-        <div class="meta">Vice president · Jan 2021 – Jan 2025</div>
-        <h3>Passion Exploration Project</h3>
-        <p class="body">Coordinated more than 50 volunteers, planned curricula for programs serving children with autism, and launched the nonprofit’s <a href="https://pepgeorgia.org/">website</a>.</p>
-      </article>
-      <article id="science-bowl" class="card" data-reveal>
-        <div class="meta">Team captain</div>
-        <h3>National Science Bowl</h3>
-        <p class="body">Organized team preparation and tracked performance. Our team placed first at the Georgia Tech Invitational and second at the state tournament.</p>
-      </article>
-    </div>
-  </section>
+    <section class="wrap interests" aria-label="Outside of work">
+      <details class="trivia">
+        <summary>Quick Nolan trivia</summary>
+        <p>Which Christopher Nolan film follows two rival stage magicians?</p>
+        <div class="answers" hidden>
+          <button type="button" data-answer="false">Inception</button>
+          <button type="button" data-answer="true">The Prestige</button>
+          <button type="button" data-answer="false">Memento</button>
+        </div>
+        <p class="feedback" role="status"></p>
+        <details class="answer-fallback"><summary>Reveal the answer</summary><p>The Prestige (2006).</p></details>
+      </details>
+    </section>
 
-  <section id="education" class="section" aria-labelledby="education-title">
-    <div class="wrap" data-reveal>
+    <section class="wrap experience" id="experience" aria-labelledby="work-title">
+      <div class="section-head">
+        <h2 id="work-title">Experience</h2>
+        <div class="filters" role="group" aria-label="Filter experiences" hidden>
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="startup" aria-pressed="false">Startup</button>
+          <button type="button" data-filter="research" aria-pressed="false">Research</button>
+          <button type="button" data-filter="healthcare" aria-pressed="false">Healthcare</button>
+          <button type="button" data-filter="leadership" aria-pressed="false">Leadership</button>
+        </div>
+      </div>
+      <p class="sr-only" role="status" id="filter-result"></p>
+      <div class="timeline">
+        <article class="card featured" data-category="startup healthcare" id="insurf">
+          <p class="eyebrow">Co-founder &amp; CEO <span>·</span> Apr–Nov 2026</p>
+          <h3><img src="assets/insurf-mark.webp" width="356" height="400" alt="">Insurf <span class="batch">YC S26</span></h3>
+          <p>Built tools to compare the true cost of health plans and help clinics work through prior authorizations and denials.</p>
+          <dl class="stats">
+            <div><dt>100+</dt><dd>Practice and employer visits</dd></div>
+            <div><dt>12</dt><dd>Employer audits</dd></div>
+            <div><dt>~$4,000</dt><dd>Potential annual savings per employee identified in audits</dd></div>
+          </dl>
+          <details>
+            <summary>What I built</summary>
+            <ul>
+              <li><strong>Surely</strong> compared health plans by total cost.</li>
+              <li><strong>Inveto</strong> helped teams prepare prior authorizations and appeals. I helped train a model to extract EHR information for specialty-specific requests and used SQL to structure training data.</li>
+            </ul>
+            <a href="https://www.insurf.io/">Visit Insurf</a>
+          </details>
+        </article>
+
+        <article class="card" data-category="research healthcare" id="global-health">
+          <p class="eyebrow">Undergraduate researcher <span>·</span> Sep 2026–Present</p>
+          <h3>Brown Center for Global Health Equity</h3>
+          <p>Reviewed how AI and machine learning are being used in global health and where adoption remains limited.</p>
+          <dl class="stats">
+            <div><dt>2</dt><dd>Comparison dimensions</dd></div>
+          </dl>
+          <details>
+            <summary>How I compared studies</summary>
+            <p>I grouped use cases by health domain and clinical function to see where applications clustered and where gaps remained.</p>
+          </details>
+        </article>
+
+        <article class="card" data-category="research healthcare" id="imaging">
+          <p class="eyebrow">Biotechnology research intern <span>·</span> Jul 2024–Apr 2025</p>
+          <h3>Winship Cancer Institute</h3>
+          <p>Helped train a foundation model in MATLAB to detect and segment liver tumors in CT scans.</p>
+          <dl class="stats">
+            <div><dt>50+</dt><dd>Materials with photon attenuation data compiled</dd></div>
+            <div><dt>2</dt><dd>Imaging tasks: detection and segmentation</dd></div>
+          </dl>
+          <details>
+            <summary>How I worked with CT data</summary>
+            <p>I applied ZeroMamba to liver cancer imaging datasets and compiled NIST XCOM photon attenuation data for numerical CT simulation.</p>
+          </details>
+        </article>
+
+        <article class="card" data-category="healthcare" id="pharmacy">
+          <p class="eyebrow">Pharmacy intern <span>·</span> Jun–Jul 2023</p>
+          <h3>Braselton Pharmacy</h3>
+          <p>Helped process medication orders for older patients and kept order records organized.</p>
+          <dl class="stats"><div><dt>Hundreds</dt><dd>Of medication orders assisted</dd></div></dl>
+          <details>
+            <summary>What I handled</summary>
+            <p>I organized medication order records and checked them for errors.</p>
+          </details>
+        </article>
+
+        <article class="card" data-category="leadership" id="pep">
+          <p class="eyebrow">Vice president <span>·</span> Jan 2021–Jan 2025</p>
+          <h3>Passion Exploration Project</h3>
+          <p>Led a nonprofit educational initiative serving children with autism.</p>
+          <dl class="stats">
+            <div><dt>50+</dt><dd>Volunteers coordinated</dd></div>
+            <div><dt>4 years</dt><dd>In the role</dd></div>
+          </dl>
+          <details>
+            <summary>Programs and website</summary>
+            <p>I coordinated curriculum planning across programs and launched the organization’s website.</p>
+            <a href="https://pepgeorgia.org/">Visit Passion Exploration Project</a>
+          </details>
+        </article>
+
+        <article class="card" data-category="leadership" id="science-bowl">
+          <p class="eyebrow">Team captain</p>
+          <h3>National Science Bowl</h3>
+          <p>Organized practice and tracked team performance across the competition season.</p>
+          <dl class="stats">
+            <div><dt>1st</dt><dd>Georgia Tech Invitational</dd></div>
+            <div><dt>2nd</dt><dd>State tournament</dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap education" id="education" aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
       <h3>Brown University</h3>
-      <p>B.S. in Neuroscience and Computer Science · Expected May 2028<br>Program in Liberal Medical Education (BS/MD)</p>
-      <p>Additional mathematics coursework at Georgia Tech, including applied combinatorics, linear algebra, and differential equations.</p>
-    </div>
-  </section>
+      <p>Neuroscience and Computer Science · Program in Liberal Medical Education (BS/MD) · Expected May 2028</p>
+      <p>Additional mathematics coursework at Georgia Tech.</p>
+    </section>
 
-  <section id="contact" class="wrap section" aria-labelledby="contact-title">
-    <h2 id="contact-title">Contact</h2>
-    <div class="actions"><a class="button" href="mailto:changxian_lu@brown.edu">Email me</a><a href="https://github.com/changxlu">GitHub</a></div>
-  </section>
-</main>
-<footer><div class="wrap"><a href="#top">Back to top</a></div></footer>
-<script>
-for (const image of document.querySelectorAll('[data-image]')) {
-  image.addEventListener('load', () => { image.hidden = false; }, { once: true });
-  image.src = image.dataset.image;
-}
-
-if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  const reveal = new IntersectionObserver(entries => {
-    for (const entry of entries) {
-      if (!entry.isIntersecting) continue;
-      entry.target.animate(
-        [{ opacity: 0.58, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
-        { duration: 450, easing: 'ease-out' }
-      );
-      reveal.unobserve(entry.target);
-    }
-  });
-  document.querySelectorAll('[data-reveal]').forEach(item => reveal.observe(item));
-}
-</script>
+    <section class="wrap contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get in touch</h2>
+      <div class="links">
+        <a class="button primary" href="mailto:changxian_lu@brown.edu">Email</a>
+        <a class="button" href="https://www.linkedin.com/in/changxianlu">LinkedIn</a>
+        <a class="button" href="https://github.com/changxlu">GitHub</a>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><a href="#top">Back to top</a></footer>
 </body>
 </html>
