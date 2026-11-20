@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chang Lu's portfolio. Neuroscience, medtech, healthcare research, and the occasional trivia question.">
-  <meta name="theme-color" content="#0b1718">
+  <meta name="description" content="Chang Lu's portfolio. Neuroscience, medtech, healthcare research, and the tools that make care easier to navigate.">
+  <meta name="theme-color" content="#f5f1e9">
   <title>Chang Lu | Neuroscience &amp; Medtech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="style.css">
   <script src="portfolio.js" defer></script>
 </head>
@@ -17,6 +20,7 @@
       <nav aria-label="Main navigation">
         <a href="#profile">Profile</a>
         <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -26,34 +30,27 @@
       <div>
         <p class="eyebrow">Neuroscience &amp; medtech</p>
         <h1 id="hero-title">Hi, I’m Chang<span>.</span></h1>
-        <p class="intro">I’m a neuroscientist with a soft spot for medtech and hard trivia questions.</p>
-        <p class="bio">I’ve worked on liver tumor imaging, AI in global health, and tools that help people make sense of health insurance. Outside of work, I’m usually fencing, playing trivia, or making a case for a Christopher Nolan rewatch.</p>
+        <p class="intro">I’m a neuroscientist drawn to the questions that become better tools for care.</p>
+        <p class="bio">I’ve worked on liver tumor imaging, AI in global health, and tools that help people make sense of health insurance. Away from my desk, I’m usually fencing, playing trivia, or making a case for a Christopher Nolan rewatch.</p>
         <div class="links">
           <a class="button primary" href="#experience">Explore my work</a>
           <a class="button" href="assets/chang-lu-cv.pdf">CV <span aria-hidden="true">· PDF</span></a>
           <a class="button" href="https://www.linkedin.com/in/changxianlu">LinkedIn</a>
         </div>
       </div>
-      <img class="portrait" src="assets/headshot.jpg" alt="Chang Lu" width="200" height="200" fetchpriority="high">
-    </section>
-
-    <section class="wrap interests" aria-label="Outside of work">
-      <details class="trivia">
-        <summary>Quick Nolan trivia</summary>
-        <p>Which Christopher Nolan film follows two rival stage magicians?</p>
-        <div class="answers" hidden>
-          <button type="button" data-answer="false">Inception</button>
-          <button type="button" data-answer="true">The Prestige</button>
-          <button type="button" data-answer="false">Memento</button>
-        </div>
-        <p class="feedback" role="status"></p>
-        <details class="answer-fallback"><summary>Reveal the answer</summary><p>The Prestige (2006).</p></details>
-      </details>
+      <figure class="portrait-frame">
+        <img class="portrait" src="assets/headshot.jpg" alt="Chang Lu" width="200" height="200" fetchpriority="high">
+        <figcaption>Chang Lu</figcaption>
+        <img class="stethoscope" src="assets/stethoscope.webp" alt="" width="200" height="200">
+      </figure>
     </section>
 
     <section class="wrap experience" id="experience" aria-labelledby="work-title">
       <div class="section-head">
-        <h2 id="work-title">Experience</h2>
+        <div class="experience-title">
+          <h2 id="work-title">Experience</h2>
+          <img src="assets/thermometer.webp" alt="" width="190" height="98">
+        </div>
         <div class="filters" role="group" aria-label="Filter experiences" hidden>
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="startup" aria-pressed="false">Startup</button>
@@ -150,9 +147,15 @@
 
     <section class="wrap education" id="education" aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
-      <h3>Brown University</h3>
-      <p>Neuroscience and Computer Science · Program in Liberal Medical Education (BS/MD) · Expected May 2028</p>
-      <p>Additional mathematics coursework at Georgia Tech.</p>
+      <div class="education-card">
+        <img class="brown-logo" src="assets/brown-university.png" alt="" width="368" height="182" loading="lazy">
+        <div>
+          <p class="eyebrow">Current - May 2029</p>
+          <h3>Brown University</h3>
+          <p>Neuroscience and Computer Science · Program in Liberal Medical Education (BS/MD)</p>
+          <p>Additional mathematics coursework at Georgia Tech.</p>
+        </div>
+      </div>
     </section>
 
     <section class="wrap contact" id="contact" aria-labelledby="contact-title">

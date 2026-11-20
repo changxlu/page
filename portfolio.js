@@ -21,21 +21,6 @@ filters.addEventListener('click', event => {
   filterResult.textContent = `Showing ${count} of ${cards.length} experiences.`;
 });
 
-const trivia = document.querySelector('.trivia');
-const answers = trivia.querySelector('.answers');
-const feedback = trivia.querySelector('.feedback');
-
-answers.hidden = false;
-trivia.querySelector('.answer-fallback').hidden = true;
-answers.addEventListener('click', event => {
-  const answer = event.target.closest('button[data-answer]');
-  if (!answer) return;
-
-  feedback.textContent = answer.dataset.answer === 'true'
-    ? 'Correct! The Prestige came out in 2006.'
-    : 'Try again. Think stage illusionists.';
-});
-
 if ('IntersectionObserver' in window && 'animate' in Element.prototype) {
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const reveal = new IntersectionObserver(entries => {
