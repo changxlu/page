@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Chang Lu's portfolio. Neuroscience, medtech, healthcare research, and the tools that make care easier to navigate.">
-  <meta name="theme-color" content="#f5f1e9">
+  <meta name="description" content="Chang Lu’s portfolio, from neuroscience and biomedical imaging to health insurance tools and global health research.">
+  <meta name="theme-color" content="#f7f4eb">
   <title>Chang Lu | Neuroscience &amp; Medtech</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,650&amp;family=Instrument+Sans:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Instrument+Sans:wght@400..700&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
   <link rel="stylesheet" href="style.css">
   <script src="portfolio.js" defer></script>
 </head>
@@ -19,38 +19,42 @@
       <a class="wordmark" href="#top">Chang Lu<span>.</span></a>
       <nav aria-label="Main navigation">
         <a href="#profile">Profile</a>
-        <a href="#experience">Experience</a>
+        <a href="#experience">Work</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
+
   <main id="main">
     <section class="wrap hero" id="profile" aria-labelledby="hero-title">
-      <div>
-        <p class="eyebrow">Neuroscience &amp; medtech</p>
-        <h1 id="hero-title">Hi, I’m Chang<span>.</span></h1>
-        <p class="intro">I’m a neuroscientist drawn to the questions that become better tools for care.</p>
-        <p class="bio">I’ve worked on liver tumor imaging, AI in global health, and tools that help people make sense of health insurance. Away from my desk, I’m usually fencing, playing trivia, or making a case for a Christopher Nolan rewatch.</p>
+      <div class="hero-copy">
+        <p class="eyebrow">Brown University <span>·</span> Providence, RI</p>
+        <h1 id="hero-title">Chang Lu<span>.</span></h1>
+        <p class="intro">I’m a neuroscientist with a soft spot for <em>medtech.</em></p>
+        <p class="bio">I’m drawn to the practical questions in healthcare. What can we learn from a CT scan? How can we make it easier to pick a health plan or appeal a denial? Those questions have taken me from a biomedical imaging lab to building Insurf.</p>
         <div class="links">
           <a class="button primary" href="#experience">Explore my work</a>
-          <a class="button" href="assets/chang-lu-cv.pdf">CV <span aria-hidden="true">· PDF</span></a>
+          <a class="button" href="assets/chang-lu-cv.pdf">CV <span>· PDF</span></a>
           <a class="button" href="https://www.linkedin.com/in/changxianlu">LinkedIn</a>
         </div>
       </div>
-      <figure class="portrait-frame">
-        <img class="portrait" src="assets/headshot.jpg" alt="Chang Lu" width="200" height="200" fetchpriority="high">
-        <figcaption>Chang Lu</figcaption>
+
+      <div class="profile-art">
+        <figure class="neuron">
+          <img src="assets/cajal-purkinje.webp" alt="Ink drawing of a Purkinje cell with a fan of finely branched dendrites" width="359" height="500">
+          <figcaption>Purkinje cell<br><span>Drawing by Ramón y Cajal</span></figcaption>
+        </figure>
+        <div class="portrait-frame">
+          <img src="assets/headshot.jpg" alt="Portrait of Chang Lu" width="200" height="200" fetchpriority="high">
+        </div>
         <img class="stethoscope" src="assets/stethoscope.webp" alt="" width="200" height="200">
-      </figure>
+      </div>
     </section>
 
     <section class="wrap experience" id="experience" aria-labelledby="work-title">
       <div class="section-head">
-        <div class="experience-title">
-          <h2 id="work-title">Experience</h2>
-          <img src="assets/thermometer.webp" alt="" width="190" height="98">
-        </div>
+        <h2 id="work-title">Experience</h2>
         <div class="filters" role="group" aria-label="Filter experiences" hidden>
           <button type="button" data-filter="all" aria-pressed="true">All</button>
           <button type="button" data-filter="startup" aria-pressed="false">Startup</button>
@@ -62,50 +66,82 @@
       <p class="sr-only" role="status" id="filter-result"></p>
       <div class="timeline">
         <article class="card featured" data-category="startup healthcare" id="insurf">
-          <p class="eyebrow">Co-founder &amp; CEO <span>·</span> Apr–Nov 2026</p>
-          <h3><img src="assets/insurf-mark.webp" width="356" height="400" alt="">Insurf <span class="batch">YC S26</span></h3>
-          <p>Built <strong>Surely</strong> to compare health plans by total cost and <strong>Inveto</strong> to help clinics prepare prior authorizations and appeal denials. I used SQL to structure training data and helped train a model to extract relevant details from electronic health records.</p>
-          <ul class="highlights" aria-label="Insurf highlights">
-            <li><strong>100+</strong> practice and employer visits</li>
-            <li><strong>12</strong> employer audits</li>
-            <li><strong>~$4,000</strong> in potential annual savings per employee identified in those audits</li>
-          </ul>
-          <a class="card-link" href="https://www.insurf.io/">insurf.io</a>
+          <div class="role">
+            <p class="eyebrow">Apr–Nov 2026</p>
+            <h3><img src="assets/insurf-mark.webp" width="356" height="400" alt="">Insurf</h3>
+            <p class="role-name">Co-founder &amp; CEO <span>·</span> YC S26</p>
+          </div>
+          <div class="work-notes">
+            <h4>Making health insurance easier to navigate</h4>
+            <p>I built <strong>Surely</strong> to compare health plans by total cost and <strong>Inveto</strong> to help clinics prepare prior authorization requests and appeals. I structured training data in SQL and helped train a model to pull relevant details from electronic health records.</p>
+            <ul class="highlights" aria-label="Insurf highlights">
+              <li><strong>100+</strong> practice and employer visits</li>
+              <li><strong>12</strong> employer audits</li>
+              <li><strong>~$4,000</strong> in potential annual savings per employee identified in those audits</li>
+            </ul>
+            <a class="card-link" href="https://www.insurf.io/">insurf.io</a>
+          </div>
         </article>
 
         <article class="card" data-category="research healthcare" id="global-health">
-          <p class="eyebrow">Undergraduate researcher <span>·</span> Sep 2026–Present</p>
-          <h3>Brown Center for Global Health Equity</h3>
-          <p>I’m reviewing how AI and machine learning are being used in global health. I group studies by the health issue they address and the clinical task they support to see where tools are being adopted and where evidence is still thin.</p>
+          <div class="role">
+            <p class="eyebrow">Sep 2026–Present</p>
+            <h3>Brown Center for Global Health Equity</h3>
+            <p class="role-name">Undergraduate researcher</p>
+          </div>
+          <div class="work-notes">
+            <h4>Mapping where AI is used in global health</h4>
+            <p>I’m reviewing studies on AI and machine learning in global health. I group them by the health issue they address and the clinical task they support, looking for where tools are being adopted and where the evidence is still thin.</p>
+          </div>
         </article>
 
         <article class="card" data-category="research healthcare" id="imaging">
-          <p class="eyebrow">Biotechnology research intern <span>·</span> Jul 2024–Apr 2025</p>
-          <h3>Winship Cancer Institute</h3>
-          <p>Helped train a foundation model in MATLAB to find liver tumors in CT scans and outline their boundaries. I also applied ZeroMamba, a zero-shot learning framework, to liver cancer imaging datasets.</p>
-          <ul class="highlights" aria-label="Biomedical imaging highlight">
-            <li>Compiled NIST photon attenuation data for <strong>50+ materials</strong> for CT simulation</li>
-          </ul>
-          <a class="card-link" href="https://pubmed.ncbi.nlm.nih.gov/39577474/">Publication</a>
+          <div class="role">
+            <p class="eyebrow">Jul 2024–Apr 2025</p>
+            <h3>Winship Cancer Institute</h3>
+            <p class="role-name">Biotechnology research intern</p>
+          </div>
+          <div class="work-notes">
+            <h4>Finding and outlining liver tumors in CT scans</h4>
+            <p>I helped train a foundation model in MATLAB and applied ZeroMamba to liver cancer imaging datasets. I also compiled NIST photon attenuation data for <strong>50+ materials</strong> for CT simulation.</p>
+            <a class="card-link" href="https://pubmed.ncbi.nlm.nih.gov/39577474/">Publication</a>
+          </div>
         </article>
 
         <article class="card" data-category="healthcare" id="pharmacy">
-          <p class="eyebrow">Pharmacy intern <span>·</span> Jun–Jul 2023</p>
-          <h3>Braselton Pharmacy</h3>
-          <p>Helped process <strong>hundreds of medication orders</strong> for older patients. I organized order records and checked them for errors as part of the pharmacy’s daily workflow.</p>
+          <div class="role">
+            <p class="eyebrow">Jun–Jul 2023</p>
+            <h3>Braselton Pharmacy</h3>
+            <p class="role-name">Pharmacy intern</p>
+          </div>
+          <div class="work-notes">
+            <h4>Supporting day-to-day pharmacy operations</h4>
+            <p>I helped process <strong>hundreds of medication orders</strong> for older patients, organized order records, and checked them for errors.</p>
+          </div>
         </article>
 
         <article class="card" data-category="leadership" id="pep">
-          <p class="eyebrow">Vice president <span>·</span> Jan 2021–Jan 2025</p>
-          <h3>Passion Exploration Project</h3>
-          <p>Coordinated <strong>50+ volunteers</strong> for an educational initiative serving children with autism. I helped plan curricula across programs and launched the organization’s website.</p>
-          <a class="card-link" href="https://pepgeorgia.org/">pepgeorgia.org</a>
+          <div class="role">
+            <p class="eyebrow">Jan 2021–Jan 2025</p>
+            <h3>Passion Exploration Project</h3>
+            <p class="role-name">Vice president</p>
+          </div>
+          <div class="work-notes">
+            <h4>Running education programs for children with autism</h4>
+            <p>I coordinated <strong>50+ volunteers</strong>, helped plan curricula across programs, and launched the organization’s website.</p>
+            <a class="card-link" href="https://pepgeorgia.org/">pepgeorgia.org</a>
+          </div>
         </article>
 
         <article class="card" data-category="leadership" id="science-bowl">
-          <p class="eyebrow">Team captain</p>
-          <h3>National Science Bowl</h3>
-          <p>Scheduled practice sessions and tracked team performance to guide our competition prep. We placed <strong>1st</strong> at the Georgia Tech Invitational and <strong>2nd</strong> at the state tournament.</p>
+          <div class="role">
+            <h3>National Science Bowl</h3>
+            <p class="role-name">Team captain</p>
+          </div>
+          <div class="work-notes">
+            <h4>Leading a team through competition season</h4>
+            <p>I scheduled practices and tracked team performance to guide our preparation. We placed <strong>1st</strong> at the Georgia Tech Invitational and <strong>2nd</strong> at the state tournament.</p>
+          </div>
         </article>
       </div>
     </section>
@@ -123,15 +159,25 @@
       </div>
     </section>
 
-    <section class="wrap contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Get in touch</h2>
-      <div class="links">
-        <a class="button primary" href="mailto:changxian_lu@brown.edu">Email</a>
-        <a class="button" href="https://www.linkedin.com/in/changxianlu">LinkedIn</a>
-        <a class="button" href="https://github.com/changxlu">GitHub</a>
+    <section class="wrap closing" id="contact" aria-labelledby="contact-title">
+      <div class="personal">
+        <div class="personal-heading">
+          <h2>Away from my desk</h2>
+          <img src="assets/thermometer.webp" alt="" width="190" height="98" loading="lazy">
+        </div>
+        <p>I fence, play trivia, and will happily make the case for a Christopher Nolan rewatch.</p>
+      </div>
+      <div class="contact">
+        <h2 id="contact-title">Get in touch</h2>
+        <div class="links">
+          <a class="button primary" href="mailto:changxian_lu@brown.edu">Email</a>
+          <a class="button" href="https://www.linkedin.com/in/changxianlu">LinkedIn</a>
+          <a class="button" href="https://github.com/changxlu">GitHub</a>
+        </div>
       </div>
     </section>
   </main>
-  <footer class="wrap"><a href="#top">Back to top</a></footer>
+
+  <footer class="wrap footer"><a href="#top">Back to top</a></footer>
 </body>
 </html>
