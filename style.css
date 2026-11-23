@@ -2,14 +2,13 @@
   color-scheme: light;
   --page: #f7f4eb;
   --paper: #fcfaf3;
-  --canvas: #e9eeE7;
+  --canvas: #e9eee7;
   --ink: #202e2b;
   --muted: #4d5c56;
   --teal: #245952;
   --deep-teal: #17443e;
   --rust: #88474a;
   --line: #bfcac1;
-  --grid: #47685d20;
   --display: "Instrument Serif", Georgia, serif;
   --body: "Instrument Sans", system-ui, sans-serif;
   --hand: "Caveat", cursive;
@@ -36,28 +35,27 @@ nav a, .wordmark { color: var(--ink); text-decoration: none; }
 nav a { font-size: .94rem; font-weight: 550; }
 nav a:hover, .wordmark:hover { color: var(--teal); text-decoration: underline; }
 .wordmark { font: 400 1.95rem/.95 var(--display); }
-.wordmark span, h1 span { color: var(--rust); }
 
 h1, h2, h3, h4, p, figure { margin: 0; }
 h1, h2, h3 { font-family: var(--display); font-weight: 400; }
-h1 { margin: .35rem 0 .65rem; font-size: clamp(4.4rem, 10vw, 8.5rem); line-height: .87; letter-spacing: -.045em; }
+h1 { margin: .35rem 0 .65rem; font-size: clamp(4.25rem, 9vw, 7.4rem); line-height: .87; letter-spacing: -.045em; }
 h2 { font-size: clamp(2.7rem, 6vw, 4.3rem); line-height: .98; letter-spacing: -.025em; }
 h3 { margin-block: .3rem; font-size: clamp(1.85rem, 3.8vw, 2.6rem); line-height: .98; letter-spacing: -.012em; }
 h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(1.5rem, 6vw, 5.25rem);
   padding-block: clamp(3rem, 7vw, 5.1rem);
 }
 .eyebrow { color: var(--teal); font-weight: 650; font-size: .875rem; }
-.hero .eyebrow { letter-spacing: .045em; }
+.greeting { font: 700 clamp(1.55rem, 3vw, 2.1rem)/1 var(--hand); color: var(--rust); }
 .eyebrow span, .role-name span { padding-inline: .18em; }
-.intro { margin-top: 1.3rem; font-size: clamp(1.27rem, 3vw, 1.65rem); line-height: 1.25; max-width: 33ch; }
+.intro { margin-top: 1.3rem; font-size: clamp(1.27rem, 3vw, 1.65rem); line-height: 1.25; max-width: 36ch; }
 .intro em { font: italic 1.32em/.9 var(--display); color: var(--teal); }
-.bio { max-width: 51ch; margin-top: .8rem; color: var(--muted); }
+.bio { max-width: 54ch; margin-top: .8rem; color: var(--muted); }
 .links { gap: .5rem; margin-top: 1.35rem; }
 .button, .filters button {
   min-height: 2.6rem;
@@ -66,7 +64,7 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
   gap: .3rem;
   padding: .45rem .82rem;
   border: 1px solid var(--line);
-  border-radius: .32rem;
+  border-radius: .75rem;
   background: transparent;
   color: var(--deep-teal);
   font-weight: 650;
@@ -77,44 +75,26 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
 .primary, .filters button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: white; }
 .primary:hover, .filters button[aria-pressed="true"]:hover { background: var(--deep-teal); color: white; }
 
-.profile-art {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr);
-  align-items: center;
-  gap: clamp(.45rem, 2vw, 1.25rem);
-  padding: clamp(.9rem, 3vw, 2.25rem);
-  background:
-    linear-gradient(to right, var(--grid) 1px, transparent 1px) 0 0 / 20px 20px,
-    linear-gradient(to bottom, var(--grid) 1px, transparent 1px) 0 0 / 20px 20px,
-    var(--canvas);
-  border: 1px solid var(--line);
-  border-radius: .55rem;
-}
+.profile-art { width: min(100%, 20rem); justify-self: center; }
 .portrait-frame {
-  grid-column: 1;
-  grid-row: 1;
-  padding: .45rem .45rem .7rem;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  box-shadow: 0 .45rem 1.1rem #29443b26;
-  transform: rotate(-5deg);
+  position: relative;
+  box-shadow: .65rem .65rem 0 #dce8dd;
+  border-radius: 1.35rem;
 }
-.portrait-frame img { width: 100%; height: auto; }
-.neuron { grid-column: 2; grid-row: 1; text-align: center; }
-.neuron img {
-  width: min(100%, 11.25rem);
+.portrait-frame > img:first-child {
+  width: 100%;
   height: auto;
-  margin-inline: auto;
-  mix-blend-mode: multiply;
+  aspect-ratio: 1 / 1.12;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: inherit;
 }
-.neuron figcaption { margin-top: .2rem; color: var(--deep-teal); font: 700 clamp(1.1rem, 2.7vw, 1.55rem)/1.1 var(--hand); }
-.neuron figcaption span { display: inline-block; color: var(--muted); font: 500 .82rem/1.25 var(--body); }
+.profile-art figcaption { margin-top: 1rem; font-size: .8125rem; color: var(--muted); }
+.profile-art figcaption a { color: inherit; }
 .stethoscope {
   position: absolute;
-  inset: auto auto -.85rem -.95rem;
-  width: clamp(3.8rem, 8vw, 6.4rem);
+  inset: auto -1.4rem -.75rem auto;
+  width: clamp(3.15rem, 7vw, 5rem);
   height: auto;
   pointer-events: none;
 }
@@ -132,7 +112,7 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
   padding: clamp(1rem, 2.5vw, 1.5rem);
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: .4rem;
+  border-radius: .75rem;
 }
 .card:target { border-color: var(--teal); }
 .featured { border-left: 3px solid var(--teal); background: #e9eee7; }
@@ -155,27 +135,31 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
   padding: clamp(1rem, 2.5vw, 1.5rem);
   background: var(--paper);
   border: 1px solid var(--line);
-  border-radius: .4rem;
+  border-radius: .75rem;
 }
 .brown-logo { width: 100%; height: auto; }
 .education-card p:not(.eyebrow) { color: var(--muted); }
 
-.closing { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1rem 2rem; padding-bottom: 2.5rem; }
-.personal, .contact { padding: clamp(1rem, 3vw, 1.6rem); border: 1px solid var(--line); border-radius: .4rem; }
-.personal { background: var(--canvas); }
-.contact { background: var(--paper); }
-.personal-heading { display: flex; gap: .5rem; align-items: center; margin-bottom: .55rem; }
-.personal-heading h2 { font: 700 clamp(1.9rem, 4vw, 3rem)/1 var(--hand); letter-spacing: 0; color: var(--deep-teal); }
-.personal-heading img { width: clamp(3.2rem, 8vw, 5rem); height: auto; }
-.personal p { color: var(--muted); }
-.contact h2 { font-size: clamp(2.15rem, 4.5vw, 3rem); }
-.contact .links { margin-top: .75rem; }
+.closing { padding-bottom: 2.5rem; }
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  background: var(--canvas);
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+}
+.contact h2 { font: 700 clamp(2.3rem, 5vw, 3.4rem)/1 var(--hand); letter-spacing: 0; color: var(--deep-teal); }
+.contact .links { margin-top: 0; }
 .footer { padding-block: 1rem 1.75rem; border-top: 1px solid var(--line); }
 
 @media (max-width: 48rem) {
   .wrap { width: calc(100% - 2rem); }
-  .hero, .closing { grid-template-columns: 1fr; }
-  .profile-art { width: min(100%, 28rem); }
+  .hero { grid-template-columns: 1fr; }
+  .profile-art { width: min(85%, 19rem); justify-self: start; }
   .card { grid-template-columns: 1fr; gap: .65rem; }
 }
 
@@ -183,7 +167,7 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
   .header-inner { min-height: 4.5rem; }
   .education-card { grid-template-columns: 1fr; }
   .brown-logo { width: 7rem; }
-  .stethoscope { left: -.5rem; }
+  .stethoscope { right: -.85rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
