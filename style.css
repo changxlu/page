@@ -51,11 +51,9 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
   padding-block: clamp(3rem, 7vw, 5.1rem);
 }
 .eyebrow { color: var(--teal); font-weight: 650; font-size: .875rem; }
-.greeting { font: 700 clamp(1.55rem, 3vw, 2.1rem)/1 var(--hand); color: var(--rust); }
+.greeting { display: block; margin-bottom: .45rem; font: 700 clamp(1.55rem, 3vw, 2.1rem)/1 var(--hand); letter-spacing: 0; color: var(--rust); }
 .eyebrow span, .role-name span { padding-inline: .18em; }
 .intro { margin-top: 1.3rem; font-size: clamp(1.27rem, 3vw, 1.65rem); line-height: 1.25; max-width: 36ch; }
-.intro em { font: italic 1.32em/.9 var(--display); color: var(--teal); }
-.bio { max-width: 54ch; margin-top: .8rem; color: var(--muted); }
 .links { gap: .5rem; margin-top: 1.35rem; }
 .button, .filters button {
   min-height: 2.6rem;
@@ -75,22 +73,18 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
 .primary, .filters button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: white; }
 .primary:hover, .filters button[aria-pressed="true"]:hover { background: var(--deep-teal); color: white; }
 
-.profile-art { width: min(100%, 20rem); justify-self: center; }
-.portrait-frame {
+.profile-art {
   position: relative;
+  width: min(100%, 15rem);
+  justify-self: center;
   box-shadow: .65rem .65rem 0 #dce8dd;
   border-radius: 1.35rem;
 }
 .portrait-frame > img:first-child {
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1.12;
-  object-fit: cover;
-  object-position: center 38%;
   border-radius: inherit;
 }
-.profile-art figcaption { margin-top: 1rem; font-size: .8125rem; color: var(--muted); }
-.profile-art figcaption a { color: inherit; }
 .stethoscope {
   position: absolute;
   inset: auto -1.4rem -.75rem auto;
@@ -154,12 +148,13 @@ h4 { font-weight: 700; font-size: 1.07rem; line-height: 1.35; }
 }
 .contact h2 { font: 700 clamp(2.3rem, 5vw, 3.4rem)/1 var(--hand); letter-spacing: 0; color: var(--deep-teal); }
 .contact .links { margin-top: 0; }
+.interests { max-width: 43ch; margin-top: .45rem; color: var(--muted); }
 .footer { padding-block: 1rem 1.75rem; border-top: 1px solid var(--line); }
 
 @media (max-width: 48rem) {
   .wrap { width: calc(100% - 2rem); }
   .hero { grid-template-columns: 1fr; }
-  .profile-art { width: min(85%, 19rem); justify-self: start; }
+  .profile-art { width: min(85%, 12.5rem); justify-self: start; }
   .card { grid-template-columns: 1fr; gap: .65rem; }
 }
 
